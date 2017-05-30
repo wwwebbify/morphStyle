@@ -4,7 +4,7 @@
         @description - picks a random (preset) style to morph, then picks a random value for that style, then animates the element to that style
         @param {object} [element] - the element to be morphed
         @return {object} - returns the element
-        @dependencies - GSAP TweenLite
+        @dependencies - GSAP TweenLite, randomize(), objLength()
     */
 
     function morphStyle(element) {
