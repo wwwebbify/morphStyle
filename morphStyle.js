@@ -8,19 +8,15 @@
     */
 
     function morphStyle(element) {
-    
-        function pickColor() {
+        function pickRGB() {
             return 'rgb(' + randomize(50, 200, NaN, 'morphStyle 2') + ',' + randomize(50, 200, NaN, 'morphStyle 3') + ',' + randomize(50, 200, NaN, 'morphStyle 4') + ')';
         }
 
         var styles = {};
-        // random background color
-        styles[1] = { 'style': 'background', 'value': function () { return pickColor(); } };
+        styles[1] = { 'style': 'background', 'value': function () { return pickRGB(); } };
         styles[2] = styles[1];
-        // random text color
-        styles[3] = { 'style': 'color', 'value': function () { return pickColor(); } };
+        styles[3] = { 'style': 'color', 'value': function () { return pickRGB(); } };
         styles[4] = styles[3];
-        // random zoom size
         styles[5] = { 'style': 'zoom', 'value': function () { return randomize(1000, 1500, NaN, 'morphStyle 1') / 1000 } };
 
         var number = (function () { return randomize(1, objLength(styles), NaN, 'morphStyle') })();
